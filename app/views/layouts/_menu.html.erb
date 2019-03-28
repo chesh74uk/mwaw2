@@ -1,0 +1,24 @@
+<div class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a href="#" class="navbar-left">MWAW</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+            <a class="navbar-brand" href="#">MWAW</a>
+            <li class="nav-item">
+                <%= active_link_to 'Walks', '/walks', class: :'nav-link', wrap_tag: :li, wrap_class: 'nav-item' %>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ale Trail</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blue Plaque</a>
+            </li>
+            <% Comfy::Cms::Site.first.pages.root.children.published.each do |page| %>
+                <li class="nav-item"><%= link_to page.label, page.url(relative: true), class: :'nav-link' %></li>
+            <% end %>
+        </ul>
+    </div>
+</div>

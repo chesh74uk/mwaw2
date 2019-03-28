@@ -1,0 +1,45 @@
+@mixin transition($transition) {
+    -moz-transition:    all $transition ease;
+    -o-transition:      all $transition ease;
+    -webkit-transition: all $transition ease;
+    -ms-transition: 		all $transition ease;
+    transition:         all $transition ease;
+}
+
+
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.work-item {
+	margin-bottom: 30px;
+	a {
+		border: none;
+		text-align: center;
+		img {
+			margin-bottom: 10px;
+			float: left;
+			border: 10px solid transparent;
+			@include transition(.5s);
+		}
+		h3 {
+			font-size: 20px;
+			color: black;
+			margin-bottom: 10px;
+		}
+		p {
+			font-size: 14px;
+			color: lighten(black, 80%);
+			margin-bottom: 0;
+		}
+		&:hover, &:active, &:focus {
+			text-decoration: none;
+			img {
+				border: 10px solid black;
+			}
+		}
+	}
+}
