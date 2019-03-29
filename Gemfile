@@ -7,6 +7,7 @@ ruby '2.5.3'
 gem 'comfortable_mexican_sofa', '~> 2.0.0'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+gem "aws-sdk-s3", require: false
 
 
 
