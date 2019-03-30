@@ -271,6 +271,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_link_to
   aws-sdk-s3
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.3.1)
