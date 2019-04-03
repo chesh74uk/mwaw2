@@ -2,6 +2,10 @@
     <div class="container">
         <hr>
         <span><%= image_tag "MWAW-Black.png", :class => "footer_image_left" %></span>
-        <span><%= image_tag "WWLogo.jpg", :class => "footer_image_right" %></span>
+        <span>
+            <%= link_to "https://walkersarewelcome.org.uk" do %>
+                <%= image_tag 'WWLogo.jpg', :class => "footer_image_right" %>
+            <% end %>
+        </span>
     </div>
 </footer>
