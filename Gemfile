@@ -9,7 +9,7 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem "aws-sdk-s3", require: false
 gem 'active_link_to'
-
+gem "comfy_blog", "~> 2.0.0"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
