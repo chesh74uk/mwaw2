@@ -6,6 +6,7 @@
     transition:         all $transition ease;
 }
 
+.hidden { display: none; }
 
 #mapsource {
   pointer-events: none;

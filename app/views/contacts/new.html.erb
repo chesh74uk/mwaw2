@@ -1,0 +1,38 @@
+<p></p>
+
+<div class = "container">
+  <div class = "row">
+    <h3>Feel free to contact us</h3>
+  </div>
+  <div class = "row">
+    <div class = "col-sm">
+        <%= simple_form_for @contact, wrapper: :horizontal_form,
+        wrapper_mappings: {
+          boolean:       :horizontal_boolean,
+          check_boxes:   :horizontal_collection,
+          date:          :horizontal_multi_select,
+          datetime:      :horizontal_multi_select,
+          file:          :horizontal_file,
+          radio_buttons: :horizontal_collection,
+          range:         :horizontal_range,
+          time:          :horizontal_multi_select
+        } do |f| %>
+          <%= f.input :name, :required => true %>
+          <%= f.input :email, :required => true %>
+          <%= f.input :message, :as => :text, :required => true %>
+          <div class= "hidden">
+            <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+          </div>
+          <div>
+            </br>
+            <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
+          </div>
+        <% end %>
+      </div>
+      <div class = "col-sm">
+      </div>
+    </div>
+</div>
+
+
+
