@@ -1,9 +1,11 @@
 <p></p>
-<div>
+<div class="container">
   <% flash.each do |key, value| %>
     <div>
-      <a href="/"> X </a>
+      <h5>
+        <a href="/"> X </a>
         <%= value %>
+      </h5>
     </div>
   <% end %>
 </div>
